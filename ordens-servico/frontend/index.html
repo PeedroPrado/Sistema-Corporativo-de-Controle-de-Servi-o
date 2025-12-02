@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Ordens de Serviço</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1 class="titulo">Ordens de Serviço</h1>
+
+    <section class="form-section">
+        <form id="form">
+            <input name="titulo" placeholder="Título" required>
+            <input name="descricao" placeholder="Descrição" required>
+
+            <select name="prioridade" required>
+                <option value="baixa">Baixa</option>
+                <option value="média">Média</option>
+                <option value="alta">Alta</option>
+            </select>
+
+            <input name="setorSolicitante" placeholder="Setor Solicitante" required>
+            <input name="valorServico" placeholder="Valor" required>
+
+            <button class="btn" type="submit">Criar</button>
+        </form>
+    </section>
+
+    <h2 class="titulo">Lista de Ordens</h2>
+
+    <div id="lista"></div>
+
+
+    <!-- MODAL DE EDIÇÃO -->
+    <div id="modal" class="modal-bg hidden">
+        <div class="modal">
+            <h3>Editar Ordem</h3>
+
+            <label>Status:</label>
+            <select id="modal-status">
+                <option value="aberta">Aberta</option>
+                <option value="em andamento">Em Andamento</option>
+                <option value="concluída">Concluída</option>
+                <option value="cancelada">Cancelada</option>
+            </select>
+
+            <label>Responsável:</label>
+            <input id="modal-responsavel">
+
+            <button id="btn-salvar" class="btn salvar">Salvar</button>
+            <button id="btn-fechar" class="btn">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
